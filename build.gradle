@@ -81,5 +81,6 @@ test {
         jvmArgs = [ "-javaagent:${configurations.agent.singleFile}" ]
     }
 
-
+    //Это настроит Gradle на автоматическое запуск тестов параллельно, используя все доступные процессоры.
+    maxParallelForks = Runtime.runtime.availableProcessors()
 }
